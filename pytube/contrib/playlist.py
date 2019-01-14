@@ -150,6 +150,7 @@ class Playlist(object):
 
         prefix_gen = self._path_num_prefix_generator(reverse_numbering)
 
+        self.video_urls.reverse() # To backup oldest first
         for link in self.video_urls:
             try:
                 yt = YouTube(link)
